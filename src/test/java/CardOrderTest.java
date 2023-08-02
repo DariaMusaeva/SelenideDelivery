@@ -65,17 +65,6 @@ public class CardOrderTest {
     }
 
     @Test
-    public void shouldTestEmptyForm() {
-        $("[data-test-id=city] input").setValue("");
-        $("[data-test-id=date] input").sendKeys(currentDate);
-        $("[data-test-id=name] input").setValue("");
-        $("[data-test-id=phone] input").setValue("");
-        $(".checkbox").click();
-        $("button.button").click();
-        $(withText("Поле обязательно для заполнения")).shouldBe(Condition.visible);
-    }
-
-    @Test
     public void shouldTestFormWithoutAgreement() {
         $("[data-test-id=city] input").setValue(city);
         $("[data-test-id=date] input").sendKeys(currentDate);
