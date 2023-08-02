@@ -70,7 +70,7 @@ public class CardOrderTest {
         $("[data-test-id=date] input").sendKeys(currentDate);
         $("[data-test-id=name] input").setValue("");
         $("[data-test-id=phone] input").setValue("");
-        $("[data-test-id=agreement]").click();
+        $(".checkbox").click();
         $("button.button").click();
         $(withText("Поле обязательно для заполнения")).shouldBe(Condition.visible);
     }
